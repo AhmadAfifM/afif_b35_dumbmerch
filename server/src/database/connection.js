@@ -1,16 +1,19 @@
 const Sequelize = require("sequelize");
-
 const db = {};
+const sequelize = new Sequelize("b35_dumbmerch", "dumbways_db", "dumbways_db", {
+  host: "localhost",
+  port: "8889",
+  dialect: "mysql",
+  logging: console.log,
+  freezeTableName: true,
 
-const sequelize = new Sequelize(
-  "b35_dumbmerch",
-  "dumbways_db",
-  "dumbmerch123",
-  {
-    host: "localhost",
-    dialect: "mysql",
-  }
-);
+  pool: {
+    max: 5,
+    min: 0,
+    acquire: 30000,
+    idle: 10000,
+  },
+});
 
 db.sequelize = sequelize;
 

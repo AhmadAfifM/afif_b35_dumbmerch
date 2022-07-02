@@ -54,11 +54,11 @@ const {
   deleteCategory,
 } = require("../controller/category");
 
-router.post("/user", auth, addUser);
-router.get("/users", auth, getUsers);
-router.get("/user/:id", auth, getUser);
-router.patch("/user/:id", auth, updateUser);
-router.delete("/user/:id", auth, deleteUser);
+router.post("/user", addUser);
+router.get("/users", getUsers);
+router.get("/user/:id", getUser);
+router.patch("/user/:id", updateUser);
+router.delete("/user/:id", deleteUser);
 
 router.get("/products", auth, getProducts);
 router.get("/product/:id", auth, getProduct);
@@ -76,11 +76,11 @@ router.get("/transactions", auth, getTransactions);
 
 router.post("/notification", notification);
 
-router.post("/category", auth, addCategory);
-router.get("/categories", auth, getCategories);
-router.get("/category/:id", auth, getCategory);
-router.patch("/category/:id", auth, updateCategory);
-router.delete("/category/:id", auth, deleteCategory);
+router.post("/category", addCategory);
+router.get("/categories", getCategories);
+router.get("/category/:id", getCategory);
+router.patch("/category/:id", updateCategory);
+router.delete("/category/:id", deleteCategory);
 
 router.post("/profile", auth, addProfile);
 router.get("/profiles", getProfiles);

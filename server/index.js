@@ -18,7 +18,7 @@ app.use(cors());
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:3001", // define client origin if both client and server have different origin
+    origin: "http://localhost:3000", // define client origin if both client and server have different origin
   },
 });
 
